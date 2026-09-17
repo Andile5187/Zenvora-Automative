@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{font-family:Arial, Helvetica, sans-serif;
+font-size: 1rem;
+line-height: 1.6;
+color:white;
+background: linear-gradient(135deg,black 60%,red,white);
+background-attachment: fixed;
+}
+a{text-decoration: none;
+}
+img,video{
+    max-width: 100%;
+    height: auto;
+    display:block;
+}
+ul{
+    list-style-position: inside;
+}
+
+h1{
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.5;
+      color: white;
+
+}
+h2{
+    font-size:1.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color:white;
+}
+h3{
+   font-size:1.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    color:white;
+}
+p,label,li{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: whitesmoke;
+}
+
+.site-header{
+    padding: 1rem 0;
+}
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    gap:1rem;
+}
+.logo{
+    width:60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.nav-logo{
+    width:70px;
+    height: auto;
+    border-radius: 6px;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem 1rem;
+}
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+.hero-video-wrap{
+    display:flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+.contact-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:1.5rem;
+    margin: 2rem 0;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0 2.5rem;
+}
+
+.gallery-video-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.5rem;
+}
+p{
+    background-color: rgba(255,255,255,0.06);
+    border-left: 3px solid red;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+section > p{
+      background-color: transparent;
+      border-left: none;
+      box-shadow: none;
+      padding: 0.25rem 0;
+}
+.gallery-img{
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease,box-shadow 0.3s ease;
+}
+hr{
+    border: none;
+    border-top: 1px solid #444;
+    margin: 2rem 0;
+}
+.site-footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color:whitesmoke;
+}
+.nav-links a{
+    color: red;
+    padding: 0.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links a:focus{
+    color: white;
+    border-bottom: 2px solid white;
+}
+.nav-links a:active{
+    color: #ffcccc;
+}
+.gallery-img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 5px 14px rgba(0,0,0,0.6);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:0.75rem;
+    max-width: 500px;
+    margin-top: 1rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+    width: 100%;
+     padding: 0.6rem;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+    color: #ffff;
+    font-size: 1rem;     
+}
+input:focus,
+textarea:focus{
+    outline: none;
+    border-color: #b30000;
+    box-shadow: 0 0 5px rgba(179,0,0,0.6);
+}
+input[type="Submit"]{
+    background-color: #b30000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding:0.75rem 1.5rem;
+    cursor:pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+}
+input[type="submit"]:hover{
+    background-color: #ff1a1a;
+}
+input[type="submit"]:active{
+    transform: scale(0.97);
+}
+@media screen and (max-width:1024px){
+    main{padding: 1.5rem 1rem;
+    }
+ .contact-grid{
+    grid-template-columns: repeat(2,1fr);
+ }   
+ .gallery{
+    grid-template-columns: repeat(2,1fr);
+ }
+ h1{
+    font-size: 2rem;
+ }
+}
+@media screen and (max-width:600px){
+    .nav-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links{
+        flex-direction: column;
+    }
+    .contact-grid{
+        grid-template-columns: 1fr;
+    }
+    .gallery{
+        grid-template-columns: 1fr;
+    }
+    h1{
+        font-size: 1.6rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
+    form{
+        max-width: 100%;
+    }
+    input[type="submit"]{align-self: stretch;
+    }
+}
